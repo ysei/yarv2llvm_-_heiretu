@@ -801,7 +801,7 @@ module MethodDefinition
             func = builder.external_function(fname, ftype)
             context.rc = b.call(func)
             context
-        }],
+        }]	# ,
       }
     },
 
@@ -820,7 +820,7 @@ module MethodDefinition
             context
         }]
       }
-    },
+    }	# ,
   }
         
 
@@ -828,7 +828,7 @@ module MethodDefinition
     nil => InlineMethod_nil,
     :Thread => InlineMethod_Thread,
     :Enumerable => InlineMethod_Enumerable,
-    :Array => InlineMethod_Array,
+    :Array => InlineMethod_Array,	# 
   }
 
   InlineMacro = {
