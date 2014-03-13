@@ -1903,7 +1903,9 @@ class YarvTranslator<YarvVisitor
   include SendUtil
   def visit_send(code, ins, local_vars, ln, info)
     mname = ins[1]
-    nargs = ins[2]
+#   nargs = ins[2]
+    nargs = ins[2] # || 0	# Ruby 2.0 
+
     isfunc = ((ins[4] & 8) != 0) # true: function type, false: method type
     args = []
     0.upto(nargs - 1) do |n|
